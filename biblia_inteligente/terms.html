@@ -62,120 +62,437 @@
         a:hover {
             text-decoration: underline;
         }
+        .language-selector {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+            gap: 8px;
+            align-items: center;
+        }
+        .language-selector label {
+            font-size: 14px;
+            color: #666;
+        }
+        .language-selector select {
+            padding: 8px 16px;
+            border: 2px solid #5dc886;
+            border-radius: 6px;
+            background-color: white;
+            color: #333;
+            font-size: 14px;
+            cursor: pointer;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+        .language-selector select:hover {
+            background-color: #f0f9f4;
+        }
+        .language-selector select:focus {
+            box-shadow: 0 0 0 3px rgba(93, 200, 134, 0.3);
+        }
+        .lang-content {
+            display: none;
+        }
+        .lang-content.active {
+            display: block;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Termos de Uso (EULA)</h1>
-        <p class="date">Última atualização: 14 de fevereiro de 2026</p>
-
-        <p>Este Contrato de Licença de Usuário Final ("EULA") é um acordo legal entre você ("Usuário") e Ednildo Macena ("Desenvolvedor") para o uso do aplicativo <strong>Bíblia Inteligente</strong> ("Aplicativo"). Ao baixar, instalar ou utilizar o Aplicativo, você concorda com os termos e condições descritos neste documento.</p>
-
-        <h2>1. Licença de Uso</h2>
-        <p>O Desenvolvedor concede a você uma licença limitada, não exclusiva, intransferível e revogável para uso pessoal e não comercial do Aplicativo, sujeita aos termos deste EULA.</p>
-        <ul>
-            <li>Você não pode copiar, modificar, distribuir, vender ou sublicenciar o Aplicativo ou qualquer parte dele.</li>
-            <li>Você não pode realizar engenharia reversa, descompilar ou desmontar o Aplicativo.</li>
-            <li>Você não pode remover ou alterar avisos de propriedade intelectual contidos no Aplicativo.</li>
-        </ul>
-
-        <h2>2. Descrição do Serviço</h2>
-        <p>O Bíblia Inteligente é um aplicativo de leitura bíblica que oferece recursos como:</p>
-        <ul>
-            <li>Leitura da Bíblia em múltiplas versões e idiomas</li>
-            <li>Pesquisa e consulta de termos bíblicos</li>
-            <li>Geração de conteúdo assistido por inteligência artificial (resumos, glossários, meditações)</li>
-            <li>Acompanhamento de progresso de leitura</li>
-            <li>Criação de rascunhos de sermões</li>
-        </ul>
-
-        <h2>3. Assinaturas e Pagamentos</h2>
-        <p>O Aplicativo oferece uma versão gratuita com funcionalidades limitadas e planos de assinatura premium ("Bíblia Inteligente Pro") que desbloqueiam recursos adicionais.</p>
-
-        <div class="highlight">
-            <h3>Informações Importantes sobre Assinaturas</h3>
-            <ul>
-                <li><strong>Planos disponíveis:</strong> Mensal e Anual.</li>
-                <li><strong>Cobrança:</strong> O pagamento será cobrado na sua conta do iTunes (Apple) ou Google Play no momento da confirmação da compra.</li>
-                <li><strong>Renovação automática:</strong> A assinatura é renovada automaticamente, a menos que a renovação automática seja desativada com pelo menos 24 horas de antecedência do término do período vigente.</li>
-                <li><strong>Valor da renovação:</strong> A conta será cobrada pelo valor correspondente ao plano escolhido dentro das 24 horas anteriores ao fim do período atual.</li>
-                <li><strong>Gerenciamento:</strong> Você pode gerenciar e cancelar suas assinaturas acessando as configurações da sua conta na App Store ou Google Play Store após a compra.</li>
-                <li><strong>Período de teste:</strong> Caso oferecido, qualquer parte não utilizada de um período de avaliação gratuita será perdida no momento da compra de uma assinatura.</li>
-            </ul>
+        <div class="language-selector">
+            <label for="language">🌐</label>
+            <select id="language" onchange="changeLanguage(this.value)">
+                <option value="pt">Português</option>
+                <option value="es">Español</option>
+                <option value="en">English</option>
+            </select>
         </div>
 
-        <h3>3.1 Cancelamento</h3>
-        <p>Você pode cancelar sua assinatura a qualquer momento através das configurações da App Store (iOS) ou Google Play Store (Android). O cancelamento entrará em vigor ao final do período de cobrança vigente, e você continuará tendo acesso aos recursos premium até essa data.</p>
+        <!-- PORTUGUÊS -->
+        <div id="content-pt" class="lang-content active">
+            <h1>Termos de Uso (EULA)</h1>
+            <p class="date">Última atualização: 14 de fevereiro de 2026</p>
 
-        <h3>3.2 Reembolsos</h3>
-        <p>As solicitações de reembolso são processadas de acordo com as políticas da Apple App Store ou Google Play Store. O Desenvolvedor não processa reembolsos diretamente.</p>
+            <p>Este Contrato de Licença de Usuário Final ("EULA") é um acordo legal entre você ("Usuário") e Ednildo Macena ("Desenvolvedor") para o uso do aplicativo <strong>Bíblia Inteligente</strong> ("Aplicativo"). Ao baixar, instalar ou utilizar o Aplicativo, você concorda com os termos e condições descritos neste documento.</p>
 
-        <h2>4. Conteúdo Gerado por IA</h2>
-        <p>O Aplicativo utiliza inteligência artificial para gerar conteúdo como resumos, explicações e meditações. Este conteúdo é fornecido apenas para fins informativos e de estudo.</p>
-        <ul>
-            <li>O conteúdo gerado por IA não substitui o aconselhamento teológico profissional.</li>
-            <li>O Desenvolvedor não garante a precisão ou completude do conteúdo gerado por IA.</li>
-            <li>O Usuário é responsável por avaliar e interpretar o conteúdo de forma crítica.</li>
-        </ul>
+            <h2>1. Licença de Uso</h2>
+            <p>O Desenvolvedor concede a você uma licença limitada, não exclusiva, intransferível e revogável para uso pessoal e não comercial do Aplicativo, sujeita aos termos deste EULA.</p>
+            <ul>
+                <li>Você não pode copiar, modificar, distribuir, vender ou sublicenciar o Aplicativo ou qualquer parte dele.</li>
+                <li>Você não pode realizar engenharia reversa, descompilar ou desmontar o Aplicativo.</li>
+                <li>Você não pode remover ou alterar avisos de propriedade intelectual contidos no Aplicativo.</li>
+            </ul>
 
-        <h2>5. Publicidade</h2>
-        <p>A versão gratuita do Aplicativo pode exibir anúncios fornecidos por serviços de terceiros, incluindo o Google AdMob. Os assinantes dos planos premium podem ter uma experiência livre de anúncios ou com anúncios reduzidos.</p>
+            <h2>2. Descrição do Serviço</h2>
+            <p>O Bíblia Inteligente é um aplicativo de leitura bíblica que oferece recursos como:</p>
+            <ul>
+                <li>Leitura da Bíblia em múltiplas versões e idiomas</li>
+                <li>Pesquisa e consulta de termos bíblicos</li>
+                <li>Geração de conteúdo assistido por inteligência artificial (resumos, glossários, meditações)</li>
+                <li>Acompanhamento de progresso de leitura</li>
+                <li>Criação de rascunhos de sermões</li>
+            </ul>
 
-        <h2>6. Propriedade Intelectual</h2>
-        <p>Todos os direitos de propriedade intelectual do Aplicativo, incluindo código-fonte, design, logotipos, ícones e funcionalidades, pertencem ao Desenvolvedor. Os textos bíblicos incluídos no Aplicativo estão em domínio público ou são utilizados sob licenças apropriadas.</p>
+            <h2>3. Assinaturas e Pagamentos</h2>
+            <p>O Aplicativo oferece uma versão gratuita com funcionalidades limitadas e planos de assinatura premium ("Bíblia Inteligente Pro") que desbloqueiam recursos adicionais.</p>
 
-        <h2>7. Uso Aceitável</h2>
-        <p>Ao usar o Aplicativo, você concorda em:</p>
-        <ul>
-            <li>Não utilizar o Aplicativo para qualquer finalidade ilegal ou não autorizada.</li>
-            <li>Não tentar contornar medidas de segurança ou limitações de acesso do Aplicativo.</li>
-            <li>Não utilizar o Aplicativo de forma que possa prejudicar, desabilitar ou sobrecarregar os servidores ou redes conectadas.</li>
-            <li>Não redistribuir ou reproduzir o conteúdo gerado pelo Aplicativo para fins comerciais sem autorização.</li>
-        </ul>
+            <div class="highlight">
+                <h3>Informações Importantes sobre Assinaturas</h3>
+                <ul>
+                    <li><strong>Planos disponíveis:</strong> Mensal e Anual.</li>
+                    <li><strong>Cobrança:</strong> O pagamento será cobrado na sua conta do iTunes (Apple) ou Google Play no momento da confirmação da compra.</li>
+                    <li><strong>Renovação automática:</strong> A assinatura é renovada automaticamente, a menos que a renovação automática seja desativada com pelo menos 24 horas de antecedência do término do período vigente.</li>
+                    <li><strong>Valor da renovação:</strong> A conta será cobrada pelo valor correspondente ao plano escolhido dentro das 24 horas anteriores ao fim do período atual.</li>
+                    <li><strong>Gerenciamento:</strong> Você pode gerenciar e cancelar suas assinaturas acessando as configurações da sua conta na App Store ou Google Play Store após a compra.</li>
+                    <li><strong>Período de teste:</strong> Caso oferecido, qualquer parte não utilizada de um período de avaliação gratuita será perdida no momento da compra de uma assinatura.</li>
+                </ul>
+            </div>
 
-        <h2>8. Isenção de Garantias</h2>
-        <p>O Aplicativo é fornecido "como está" e "conforme disponível", sem garantias de qualquer tipo, expressas ou implícitas. O Desenvolvedor não garante que:</p>
-        <ul>
-            <li>O Aplicativo funcionará de forma ininterrupta ou livre de erros.</li>
-            <li>Os resultados obtidos com o uso do Aplicativo serão precisos ou confiáveis.</li>
-            <li>Defeitos no Aplicativo serão corrigidos.</li>
-        </ul>
+            <h3>3.1 Cancelamento</h3>
+            <p>Você pode cancelar sua assinatura a qualquer momento através das configurações da App Store (iOS) ou Google Play Store (Android). O cancelamento entrará em vigor ao final do período de cobrança vigente, e você continuará tendo acesso aos recursos premium até essa data.</p>
 
-        <h2>9. Limitação de Responsabilidade</h2>
-        <p>Em nenhuma circunstância o Desenvolvedor será responsável por quaisquer danos diretos, indiretos, incidentais, especiais, consequenciais ou punitivos decorrentes do uso ou da impossibilidade de uso do Aplicativo, incluindo, mas não se limitando a, perda de dados, lucros cessantes ou interrupção de negócios.</p>
+            <h3>3.2 Reembolsos</h3>
+            <p>As solicitações de reembolso são processadas de acordo com as políticas da Apple App Store ou Google Play Store. O Desenvolvedor não processa reembolsos diretamente.</p>
 
-        <h2>10. Rescisão</h2>
-        <p>Este EULA é válido até ser rescindido. O Desenvolvedor pode rescindir este acordo a qualquer momento se você violar qualquer um dos termos estabelecidos. Após a rescisão:</p>
-        <ul>
-            <li>Sua licença de uso do Aplicativo será imediatamente encerrada.</li>
-            <li>Você deverá desinstalar e destruir todas as cópias do Aplicativo em sua posse.</li>
-            <li>As cláusulas de propriedade intelectual, isenção de garantias e limitação de responsabilidade continuarão em vigor.</li>
-        </ul>
+            <h2>4. Conteúdo Gerado por IA</h2>
+            <p>O Aplicativo utiliza inteligência artificial para gerar conteúdo como resumos, explicações e meditações. Este conteúdo é fornecido apenas para fins informativos e de estudo.</p>
+            <ul>
+                <li>O conteúdo gerado por IA não substitui o aconselhamento teológico profissional.</li>
+                <li>O Desenvolvedor não garante a precisão ou completude do conteúdo gerado por IA.</li>
+                <li>O Usuário é responsável por avaliar e interpretar o conteúdo de forma crítica.</li>
+            </ul>
 
-        <h2>11. Alterações nestes Termos</h2>
-        <p>O Desenvolvedor reserva-se o direito de modificar estes Termos de Uso a qualquer momento. As alterações entrarão em vigor imediatamente após a publicação da versão atualizada. O uso continuado do Aplicativo após tais alterações constitui sua aceitação dos novos termos.</p>
+            <h2>5. Publicidade</h2>
+            <p>A versão gratuita do Aplicativo pode exibir anúncios fornecidos por serviços de terceiros, incluindo o Google AdMob. Os assinantes dos planos premium podem ter uma experiência livre de anúncios ou com anúncios reduzidos.</p>
 
-        <h2>12. Legislação Aplicável</h2>
-        <p>Este EULA será regido e interpretado de acordo com as leis da República Federativa do Brasil. Qualquer disputa decorrente deste acordo será submetida ao foro da comarca do domicílio do Desenvolvedor.</p>
+            <h2>6. Propriedade Intelectual</h2>
+            <p>Todos os direitos de propriedade intelectual do Aplicativo, incluindo código-fonte, design, logotipos, ícones e funcionalidades, pertencem ao Desenvolvedor. Os textos bíblicos incluídos no Aplicativo estão em domínio público ou são utilizados sob licenças apropriadas.</p>
 
-        <h2>13. Privacidade</h2>
-        <p>O uso do Aplicativo também está sujeito à nossa <a href="https://nildomacena.github.io/politicas-privacidade/biblia_inteligente/" target="_blank">Política de Privacidade</a>, que descreve como coletamos, usamos e protegemos suas informações pessoais.</p>
+            <h2>7. Uso Aceitável</h2>
+            <p>Ao usar o Aplicativo, você concorda em:</p>
+            <ul>
+                <li>Não utilizar o Aplicativo para qualquer finalidade ilegal ou não autorizada.</li>
+                <li>Não tentar contornar medidas de segurança ou limitações de acesso do Aplicativo.</li>
+                <li>Não utilizar o Aplicativo de forma que possa prejudicar, desabilitar ou sobrecarregar os servidores ou redes conectadas.</li>
+                <li>Não redistribuir ou reproduzir o conteúdo gerado pelo Aplicativo para fins comerciais sem autorização.</li>
+            </ul>
 
-        <h2>14. Contato</h2>
-        <p>Se você tiver dúvidas sobre estes Termos de Uso, entre em contato conosco:</p>
-        <ul>
-            <li><strong>Desenvolvedor:</strong> Ednildo Macena</li>
-            <li><strong>Email:</strong> ednildomacena@gmail.com</li>
-        </ul>
+            <h2>8. Isenção de Garantias</h2>
+            <p>O Aplicativo é fornecido "como está" e "conforme disponível", sem garantias de qualquer tipo, expressas ou implícitas. O Desenvolvedor não garante que:</p>
+            <ul>
+                <li>O Aplicativo funcionará de forma ininterrupta ou livre de erros.</li>
+                <li>Os resultados obtidos com o uso do Aplicativo serão precisos ou confiáveis.</li>
+                <li>Defeitos no Aplicativo serão corrigidos.</li>
+            </ul>
 
-        <div class="highlight">
-            <h3>Ao utilizar o Bíblia Inteligente, você reconhece que leu, compreendeu e concorda com estes Termos de Uso.</h3>
+            <h2>9. Limitação de Responsabilidade</h2>
+            <p>Em nenhuma circunstância o Desenvolvedor será responsável por quaisquer danos diretos, indiretos, incidentais, especiais, consequenciais ou punitivos decorrentes do uso ou da impossibilidade de uso do Aplicativo, incluindo, mas não se limitando a, perda de dados, lucros cessantes ou interrupção de negócios.</p>
+
+            <h2>10. Rescisão</h2>
+            <p>Este EULA é válido até ser rescindido. O Desenvolvedor pode rescindir este acordo a qualquer momento se você violar qualquer um dos termos estabelecidos. Após a rescisão:</p>
+            <ul>
+                <li>Sua licença de uso do Aplicativo será imediatamente encerrada.</li>
+                <li>Você deverá desinstalar e destruir todas as cópias do Aplicativo em sua posse.</li>
+                <li>As cláusulas de propriedade intelectual, isenção de garantias e limitação de responsabilidade continuarão em vigor.</li>
+            </ul>
+
+            <h2>11. Alterações nestes Termos</h2>
+            <p>O Desenvolvedor reserva-se o direito de modificar estes Termos de Uso a qualquer momento. As alterações entrarão em vigor imediatamente após a publicação da versão atualizada. O uso continuado do Aplicativo após tais alterações constitui sua aceitação dos novos termos.</p>
+
+            <h2>12. Legislação Aplicável</h2>
+            <p>Este EULA será regido e interpretado de acordo com as leis da República Federativa do Brasil. Qualquer disputa decorrente deste acordo será submetida ao foro da comarca do domicílio do Desenvolvedor.</p>
+
+            <h2>13. Privacidade</h2>
+            <p>O uso do Aplicativo também está sujeito à nossa <a href="https://nildomacena.github.io/politicas-privacidade/biblia_inteligente/" target="_blank">Política de Privacidade</a>, que descreve como coletamos, usamos e protegemos suas informações pessoais.</p>
+
+            <h2>14. Contato</h2>
+            <p>Se você tiver dúvidas sobre estes Termos de Uso, entre em contato conosco:</p>
+            <ul>
+                <li><strong>Desenvolvedor:</strong> Ednildo Macena</li>
+                <li><strong>Email:</strong> koinedevelopment@gmail.com</li>
+            </ul>
+
+            <div class="highlight">
+                <h3>Ao utilizar o Bíblia Inteligente, você reconhece que leu, compreendeu e concorda com estes Termos de Uso.</h3>
+            </div>
+        </div>
+
+        <!-- ESPAÑOL -->
+        <div id="content-es" class="lang-content">
+            <h1>Términos de Uso (EULA)</h1>
+            <p class="date">Última actualización: 14 de febrero de 2026</p>
+
+            <p>Este Contrato de Licencia de Usuario Final ("EULA") es un acuerdo legal entre usted ("Usuario") y Ednildo Macena ("Desarrollador") para el uso de la aplicación <strong>Biblia Inteligente</strong> ("Aplicación"). Al descargar, instalar o utilizar la Aplicación, usted acepta los términos y condiciones descritos en este documento.</p>
+
+            <h2>1. Licencia de Uso</h2>
+            <p>El Desarrollador le otorga una licencia limitada, no exclusiva, intransferible y revocable para uso personal y no comercial de la Aplicación, sujeta a los términos de este EULA.</p>
+            <ul>
+                <li>No puede copiar, modificar, distribuir, vender o sublicenciar la Aplicación o cualquier parte de ella.</li>
+                <li>No puede realizar ingeniería inversa, descompilar o desensamblar la Aplicación.</li>
+                <li>No puede eliminar o alterar avisos de propiedad intelectual contenidos en la Aplicación.</li>
+            </ul>
+
+            <h2>2. Descripción del Servicio</h2>
+            <p>Biblia Inteligente es una aplicación de lectura bíblica que ofrece recursos como:</p>
+            <ul>
+                <li>Lectura de la Biblia en múltiples versiones e idiomas</li>
+                <li>Búsqueda y consulta de términos bíblicos</li>
+                <li>Generación de contenido asistido por inteligencia artificial (resúmenes, glosarios, meditaciones)</li>
+                <li>Seguimiento del progreso de lectura</li>
+                <li>Creación de borradores de sermones</li>
+            </ul>
+
+            <h2>3. Suscripciones y Pagos</h2>
+            <p>La Aplicación ofrece una versión gratuita con funcionalidades limitadas y planes de suscripción premium ("Biblia Inteligente Pro") que desbloquean recursos adicionales.</p>
+
+            <div class="highlight">
+                <h3>Información Importante sobre Suscripciones</h3>
+                <ul>
+                    <li><strong>Planes disponibles:</strong> Mensual y Anual.</li>
+                    <li><strong>Cobro:</strong> El pago se cargará a su cuenta de iTunes (Apple) o Google Play en el momento de la confirmación de la compra.</li>
+                    <li><strong>Renovación automática:</strong> La suscripción se renueva automáticamente, a menos que la renovación automática se desactive con al menos 24 horas de anticipación antes del final del período vigente.</li>
+                    <li><strong>Valor de renovación:</strong> Se cargará a la cuenta el valor correspondiente al plan elegido dentro de las 24 horas anteriores al final del período actual.</li>
+                    <li><strong>Gestión:</strong> Puede gestionar y cancelar sus suscripciones accediendo a la configuración de su cuenta en App Store o Google Play Store después de la compra.</li>
+                    <li><strong>Período de prueba:</strong> Si se ofrece, cualquier parte no utilizada de un período de prueba gratuito se perderá al momento de comprar una suscripción.</li>
+                </ul>
+            </div>
+
+            <h3>3.1 Cancelación</h3>
+            <p>Puede cancelar su suscripción en cualquier momento a través de la configuración de App Store (iOS) o Google Play Store (Android). La cancelación entrará en vigor al final del período de facturación vigente, y continuará teniendo acceso a los recursos premium hasta esa fecha.</p>
+
+            <h3>3.2 Reembolsos</h3>
+            <p>Las solicitudes de reembolso se procesan de acuerdo con las políticas de Apple App Store o Google Play Store. El Desarrollador no procesa reembolsos directamente.</p>
+
+            <h2>4. Contenido Generado por IA</h2>
+            <p>La Aplicación utiliza inteligencia artificial para generar contenido como resúmenes, explicaciones y meditaciones. Este contenido se proporciona únicamente con fines informativos y de estudio.</p>
+            <ul>
+                <li>El contenido generado por IA no sustituye el asesoramiento teológico profesional.</li>
+                <li>El Desarrollador no garantiza la precisión o integridad del contenido generado por IA.</li>
+                <li>El Usuario es responsable de evaluar e interpretar el contenido de forma crítica.</li>
+            </ul>
+
+            <h2>5. Publicidad</h2>
+            <p>La versión gratuita de la Aplicación puede mostrar anuncios proporcionados por servicios de terceros, incluido Google AdMob. Los suscriptores de planes premium pueden tener una experiencia libre de anuncios o con anuncios reducidos.</p>
+
+            <h2>6. Propiedad Intelectual</h2>
+            <p>Todos los derechos de propiedad intelectual de la Aplicación, incluido el código fuente, diseño, logotipos, iconos y funcionalidades, pertenecen al Desarrollador. Los textos bíblicos incluidos en la Aplicación están en dominio público o se utilizan bajo licencias apropiadas.</p>
+
+            <h2>7. Uso Aceptable</h2>
+            <p>Al usar la Aplicación, usted acepta:</p>
+            <ul>
+                <li>No utilizar la Aplicación para ningún propósito ilegal o no autorizado.</li>
+                <li>No intentar eludir medidas de seguridad o limitaciones de acceso de la Aplicación.</li>
+                <li>No utilizar la Aplicación de manera que pueda dañar, deshabilitar o sobrecargar los servidores o redes conectadas.</li>
+                <li>No redistribuir o reproducir el contenido generado por la Aplicación con fines comerciales sin autorización.</li>
+            </ul>
+
+            <h2>8. Exención de Garantías</h2>
+            <p>La Aplicación se proporciona "tal cual" y "según disponibilidad", sin garantías de ningún tipo, expresas o implícitas. El Desarrollador no garantiza que:</p>
+            <ul>
+                <li>La Aplicación funcionará de manera ininterrumpida o libre de errores.</li>
+                <li>Los resultados obtenidos con el uso de la Aplicación serán precisos o confiables.</li>
+                <li>Los defectos en la Aplicación serán corregidos.</li>
+            </ul>
+
+            <h2>9. Limitación de Responsabilidad</h2>
+            <p>En ninguna circunstancia el Desarrollador será responsable de ningún daño directo, indirecto, incidental, especial, consecuente o punitivo que surja del uso o la imposibilidad de uso de la Aplicación, incluyendo, pero no limitado a, pérdida de datos, lucro cesante o interrupción del negocio.</p>
+
+            <h2>10. Rescisión</h2>
+            <p>Este EULA es válido hasta que sea rescindido. El Desarrollador puede rescindir este acuerdo en cualquier momento si usted viola cualquiera de los términos establecidos. Después de la rescisión:</p>
+            <ul>
+                <li>Su licencia de uso de la Aplicación será terminada inmediatamente.</li>
+                <li>Deberá desinstalar y destruir todas las copias de la Aplicación en su posesión.</li>
+                <li>Las cláusulas de propiedad intelectual, exención de garantías y limitación de responsabilidad continuarán vigentes.</li>
+            </ul>
+
+            <h2>11. Cambios en estos Términos</h2>
+            <p>El Desarrollador se reserva el derecho de modificar estos Términos de Uso en cualquier momento. Los cambios entrarán en vigor inmediatamente después de la publicación de la versión actualizada. El uso continuado de la Aplicación después de dichos cambios constituye su aceptación de los nuevos términos.</p>
+
+            <h2>12. Legislación Aplicable</h2>
+            <p>Este EULA se regirá e interpretará de acuerdo con las leyes de la República Federativa de Brasil. Cualquier disputa que surja de este acuerdo será sometida al fuero de la jurisdicción del domicilio del Desarrollador.</p>
+
+            <h2>13. Privacidad</h2>
+            <p>El uso de la Aplicación también está sujeto a nuestra <a href="https://nildomacena.github.io/politicas-privacidade/biblia_inteligente/" target="_blank">Política de Privacidad</a>, que describe cómo recopilamos, usamos y protegemos su información personal.</p>
+
+            <h2>14. Contacto</h2>
+            <p>Si tiene preguntas sobre estos Términos de Uso, contáctenos:</p>
+            <ul>
+                <li><strong>Desarrollador:</strong> Ednildo Macena</li>
+                <li><strong>Email:</strong> koinedevelopment@gmail.com</li>
+            </ul>
+
+            <div class="highlight">
+                <h3>Al utilizar Biblia Inteligente, usted reconoce que ha leído, comprendido y acepta estos Términos de Uso.</h3>
+            </div>
+        </div>
+
+        <!-- ENGLISH -->
+        <div id="content-en" class="lang-content">
+            <h1>Terms of Use (EULA)</h1>
+            <p class="date">Last updated: February 14, 2026</p>
+
+            <p>This End User License Agreement ("EULA") is a legal agreement between you ("User") and Ednildo Macena ("Developer") for the use of the <strong>Smart Bible</strong> application ("Application"). By downloading, installing, or using the Application, you agree to the terms and conditions described in this document.</p>
+
+            <h2>1. License of Use</h2>
+            <p>The Developer grants you a limited, non-exclusive, non-transferable, and revocable license for personal and non-commercial use of the Application, subject to the terms of this EULA.</p>
+            <ul>
+                <li>You may not copy, modify, distribute, sell, or sublicense the Application or any part of it.</li>
+                <li>You may not reverse engineer, decompile, or disassemble the Application.</li>
+                <li>You may not remove or alter intellectual property notices contained in the Application.</li>
+            </ul>
+
+            <h2>2. Service Description</h2>
+            <p>Smart Bible is a Bible reading application that offers features such as:</p>
+            <ul>
+                <li>Bible reading in multiple versions and languages</li>
+                <li>Search and consultation of biblical terms</li>
+                <li>AI-assisted content generation (summaries, glossaries, meditations)</li>
+                <li>Reading progress tracking</li>
+                <li>Sermon draft creation</li>
+            </ul>
+
+            <h2>3. Subscriptions and Payments</h2>
+            <p>The Application offers a free version with limited features and premium subscription plans ("Smart Bible Pro") that unlock additional resources.</p>
+
+            <div class="highlight">
+                <h3>Important Subscription Information</h3>
+                <ul>
+                    <li><strong>Available plans:</strong> Monthly and Annual.</li>
+                    <li><strong>Billing:</strong> Payment will be charged to your iTunes (Apple) or Google Play account at the time of purchase confirmation.</li>
+                    <li><strong>Auto-renewal:</strong> The subscription renews automatically unless auto-renewal is turned off at least 24 hours before the end of the current period.</li>
+                    <li><strong>Renewal amount:</strong> Your account will be charged the amount corresponding to the chosen plan within 24 hours before the end of the current period.</li>
+                    <li><strong>Management:</strong> You can manage and cancel your subscriptions by accessing your account settings in the App Store or Google Play Store after purchase.</li>
+                    <li><strong>Trial period:</strong> If offered, any unused portion of a free trial period will be forfeited when purchasing a subscription.</li>
+                </ul>
+            </div>
+
+            <h3>3.1 Cancellation</h3>
+            <p>You can cancel your subscription at any time through the App Store (iOS) or Google Play Store (Android) settings. Cancellation will take effect at the end of the current billing period, and you will continue to have access to premium features until that date.</p>
+
+            <h3>3.2 Refunds</h3>
+            <p>Refund requests are processed according to Apple App Store or Google Play Store policies. The Developer does not process refunds directly.</p>
+
+            <h2>4. AI-Generated Content</h2>
+            <p>The Application uses artificial intelligence to generate content such as summaries, explanations, and meditations. This content is provided for informational and study purposes only.</p>
+            <ul>
+                <li>AI-generated content does not replace professional theological advice.</li>
+                <li>The Developer does not guarantee the accuracy or completeness of AI-generated content.</li>
+                <li>The User is responsible for critically evaluating and interpreting the content.</li>
+            </ul>
+
+            <h2>5. Advertising</h2>
+            <p>The free version of the Application may display ads provided by third-party services, including Google AdMob. Premium plan subscribers may have an ad-free or reduced-ad experience.</p>
+
+            <h2>6. Intellectual Property</h2>
+            <p>All intellectual property rights of the Application, including source code, design, logos, icons, and features, belong to the Developer. Biblical texts included in the Application are in the public domain or used under appropriate licenses.</p>
+
+            <h2>7. Acceptable Use</h2>
+            <p>By using the Application, you agree to:</p>
+            <ul>
+                <li>Not use the Application for any illegal or unauthorized purpose.</li>
+                <li>Not attempt to bypass security measures or access limitations of the Application.</li>
+                <li>Not use the Application in a way that may harm, disable, or overload connected servers or networks.</li>
+                <li>Not redistribute or reproduce content generated by the Application for commercial purposes without authorization.</li>
+            </ul>
+
+            <h2>8. Disclaimer of Warranties</h2>
+            <p>The Application is provided "as is" and "as available," without warranties of any kind, express or implied. The Developer does not guarantee that:</p>
+            <ul>
+                <li>The Application will function uninterrupted or error-free.</li>
+                <li>Results obtained from using the Application will be accurate or reliable.</li>
+                <li>Defects in the Application will be corrected.</li>
+            </ul>
+
+            <h2>9. Limitation of Liability</h2>
+            <p>Under no circumstances shall the Developer be liable for any direct, indirect, incidental, special, consequential, or punitive damages arising from the use or inability to use the Application, including but not limited to loss of data, lost profits, or business interruption.</p>
+
+            <h2>10. Termination</h2>
+            <p>This EULA is valid until terminated. The Developer may terminate this agreement at any time if you violate any of the established terms. Upon termination:</p>
+            <ul>
+                <li>Your license to use the Application will be immediately terminated.</li>
+                <li>You must uninstall and destroy all copies of the Application in your possession.</li>
+                <li>The intellectual property, disclaimer of warranties, and limitation of liability clauses will remain in effect.</li>
+            </ul>
+
+            <h2>11. Changes to These Terms</h2>
+            <p>The Developer reserves the right to modify these Terms of Use at any time. Changes will take effect immediately upon publication of the updated version. Continued use of the Application after such changes constitutes your acceptance of the new terms.</p>
+
+            <h2>12. Applicable Law</h2>
+            <p>This EULA shall be governed and interpreted in accordance with the laws of the Federative Republic of Brazil. Any dispute arising from this agreement shall be submitted to the jurisdiction of the Developer's domicile.</p>
+
+            <h2>13. Privacy</h2>
+            <p>Use of the Application is also subject to our <a href="https://nildomacena.github.io/politicas-privacidade/biblia_inteligente/" target="_blank">Privacy Policy</a>, which describes how we collect, use, and protect your personal information.</p>
+
+            <h2>14. Contact</h2>
+            <p>If you have questions about these Terms of Use, please contact us:</p>
+            <ul>
+                <li><strong>Developer:</strong> Ednildo Macena</li>
+                <li><strong>Email:</strong> koinedevelopment@gmail.com</li>
+            </ul>
+
+            <div class="highlight">
+                <h3>By using Smart Bible, you acknowledge that you have read, understood, and agree to these Terms of Use.</h3>
+            </div>
         </div>
 
         <hr style="margin: 30px 0; border: none; border-top: 1px solid #ddd;">
         <p style="text-align: center; color: #666; font-size: 14px;">
-            Bíblia Inteligente - Todos os direitos reservados &copy; 2025-2026
+            Bíblia Inteligente - <span id="footer-text">Todos os direitos reservados</span> &copy; 2025-2026
         </p>
     </div>
+
+    <script>
+        function changeLanguage(lang) {
+            // Hide all content
+            document.querySelectorAll('.lang-content').forEach(el => {
+                el.classList.remove('active');
+            });
+            
+            // Show selected language content
+            document.getElementById('content-' + lang).classList.add('active');
+            
+            // Update HTML lang attribute
+            document.documentElement.lang = lang === 'pt' ? 'pt-BR' : (lang === 'es' ? 'es' : 'en');
+            
+            // Update page title
+            const titles = {
+                'pt': 'Termos de Uso (EULA) - Bíblia Inteligente',
+                'es': 'Términos de Uso (EULA) - Biblia Inteligente',
+                'en': 'Terms of Use (EULA) - Smart Bible'
+            };
+            document.title = titles[lang];
+            
+            // Update footer text
+            const footerTexts = {
+                'pt': 'Todos os direitos reservados',
+                'es': 'Todos los derechos reservados',
+                'en': 'All rights reserved'
+            };
+            document.getElementById('footer-text').textContent = footerTexts[lang];
+            
+            // Save preference
+            localStorage.setItem('preferred-language', lang);
+        }
+        
+        // Load saved language preference or detect browser language
+        document.addEventListener('DOMContentLoaded', function() {
+            let savedLang = localStorage.getItem('preferred-language');
+            
+            if (!savedLang) {
+                const browserLang = navigator.language || navigator.userLanguage;
+                if (browserLang.startsWith('es')) {
+                    savedLang = 'es';
+                } else if (browserLang.startsWith('en')) {
+                    savedLang = 'en';
+                } else {
+                    savedLang = 'pt';
+                }
+            }
+            
+            document.getElementById('language').value = savedLang;
+            changeLanguage(savedLang);
+        });
+    </script>
 </body>
 </html>
