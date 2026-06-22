@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Política de Privacidade do Saldox — Privacy Policy" />
+  <title>Saldox — Política de Privacidade / Privacy Policy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #385494;
+      --primary-light: #5a7bc4;
+      --primary-dark: #1e3566;
+      --background: #f5f6fa;
+      --surface: #ffffff;
+      --text-primary: #1a1f36;
+      --text-secondary: #6b7280;
+      --divider: #e5e7eb;
+      --radius: 12px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--background);
+      color: var(--text-primary);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .header {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+      color: #fff;
+      padding: 40px 20px 32px;
+      text-align: center;
+    }
+
+    .header h1 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .header p {
+      font-size: 0.95rem;
+      opacity: 0.9;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: -20px auto 48px;
+      padding: 0 16px;
+    }
+
+    .card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+      padding: 28px 24px;
+    }
+
+    .lang-switch {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 24px;
+      padding: 4px;
+      background: var(--background);
+      border-radius: 10px;
+    }
+
+    .lang-switch button {
+      flex: 1;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      background: transparent;
+      color: var(--text-secondary);
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .lang-switch button.active {
+      background: var(--surface);
+      color: var(--primary);
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    }
+
+    .lang-switch button:hover:not(.active) {
+      color: var(--text-primary);
+    }
+
+    .updated {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--divider);
+    }
+
+    .content h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin: 28px 0 10px;
+    }
+
+    .content h2:first-child {
+      margin-top: 0;
+    }
+
+    .content p {
+      margin-bottom: 12px;
+      color: var(--text-primary);
+      font-size: 0.95rem;
+    }
+
+    .content ul {
+      margin: 0 0 14px 20px;
+      font-size: 0.95rem;
+    }
+
+    .content li {
+      margin-bottom: 6px;
+    }
+
+    .content a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .content a:hover {
+      text-decoration: underline;
+    }
+
+    .content strong {
+      font-weight: 600;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 24px 16px;
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        padding: 20px 16px;
+      }
+
+      .header h1 {
+        font-size: 1.45rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h1>Saldox</h1>
+    <p id="header-subtitle">Política de Privacidade</p>
+  </header>
+
+  <main class="container">
+    <article class="card">
+      <nav class="lang-switch" aria-label="Language / Idioma">
+        <button type="button" id="btn-pt" class="active" aria-pressed="true">Português (BR)</button>
+        <button type="button" id="btn-en" aria-pressed="false">English (US)</button>
+      </nav>
+
+      <!-- Português -->
+      <div id="content-pt" class="content" lang="pt-BR">
+        <p class="updated">Última atualização: 19 de junho de 2026</p>
+
+        <p>
+          Esta Política de Privacidade descreve como o aplicativo <strong>Saldox</strong>
+          (“App”, “nós”) coleta, usa, armazena e protege suas informações pessoais quando você
+          utiliza nossos serviços de controle financeiro pessoal.
+        </p>
+        <p>
+          Ao utilizar o Saldox, você concorda com as práticas descritas nesta política,
+          em conformidade com a Lei Geral de Proteção de Dados (LGPD — Lei nº 13.709/2018)
+          e demais legislações aplicáveis.
+        </p>
+
+        <h2>1. Quem somos</h2>
+        <p>
+          O Saldox é um aplicativo de finanças pessoais que permite registrar receitas e despesas,
+          gerenciar cartões de crédito, acompanhar compromissos mensais e obter análises
+          financeiras, incluindo recursos assistidos por inteligência artificial.
+        </p>
+
+        <h2>2. Dados que coletamos</h2>
+        <p>Podemos coletar e processar as seguintes categorias de dados:</p>
+        <ul>
+          <li>
+            <strong>Dados de conta e autenticação:</strong> endereço de e-mail, nome (quando
+            fornecido por provedores de login como Google ou Apple), identificador único de
+            usuário e tokens de sessão.
+          </li>
+          <li>
+            <strong>Dados financeiros inseridos por você:</strong> transações (receitas e
+            despesas), categorias, cartões de crédito, parcelas, compromissos recorrentes,
+            pagamentos de fatura e demais informações que você registra no App.
+          </li>
+          <li>
+            <strong>Preferências do aplicativo:</strong> idioma, país, moeda, regime de
+            contabilização de cartão e outras configurações salvas no seu perfil ou
+            localmente no dispositivo.
+          </li>
+          <li>
+            <strong>Dados de faturas em PDF:</strong> quando você importa uma fatura de cartão,
+            o arquivo PDF é enviado ao nosso servidor para extração e categorização das
+            transações por meio de inteligência artificial.
+          </li>
+          <li>
+            <strong>Mensagens do chat de análise:</strong> perguntas que você envia e respostas
+            geradas pelo assistente de IA, vinculadas ao mês de referência selecionado.
+          </li>
+          <li>
+            <strong>Resumos financeiros para IA:</strong> para o chat e análises, enviamos
+            ao backend resumos e métricas agregadas da sua situação financeira — não a lista
+            completa bruta de todas as transações, salvo o necessário para a funcionalidade
+            solicitada.
+          </li>
+          <li>
+            <strong>Dados armazenados localmente:</strong> preferências como idioma, visibilidade
+            de valores na tela inicial e regime do cartão podem ser guardados no seu dispositivo
+            por meio de armazenamento local.
+          </li>
+          <li>
+            <strong>Notificações:</strong> se você ativar lembretes, o App solicita permissão
+            para enviar notificações locais no dispositivo. Não enviamos notificações push
+            de marketing.
+          </li>
+        </ul>
+
+        <h2>3. Como usamos seus dados</h2>
+        <p>Utilizamos seus dados para:</p>
+        <ul>
+          <li>Autenticar sua conta e manter sua sessão ativa;</li>
+          <li>Exibir dashboards, gráficos, relatórios e resumos financeiros;</li>
+          <li>Processar importação de faturas em PDF e sugerir transações;</li>
+          <li>Fornecer o assistente de análise financeira com IA;</li>
+          <li>Enviar lembretes de transações recorrentes, quando habilitados;</li>
+          <li>Salvar suas preferências de idioma, moeda e país;</li>
+          <li>Garantir segurança, prevenir fraudes e melhorar o App.</li>
+        </ul>
+
+        <h2>4. Bases legais (LGPD)</h2>
+        <p>O tratamento dos seus dados pessoais pode se basear em:</p>
+        <ul>
+          <li><strong>Execução de contrato:</strong> para prestar os serviços do App;</li>
+          <li><strong>Consentimento:</strong> para funcionalidades opcionais, como notificações;</li>
+          <li><strong>Legítimo interesse:</strong> para segurança, melhorias e prevenção de abusos;</li>
+          <li><strong>Cumprimento de obrigação legal:</strong> quando exigido por lei.</li>
+        </ul>
+
+        <h2>5. Compartilhamento com terceiros</h2>
+        <p>Podemos compartilhar dados com os seguintes prestadores de serviço, estritamente para operar o App:</p>
+        <ul>
+          <li>
+            <strong>Supabase</strong> — autenticação, banco de dados e armazenamento seguro
+            dos seus dados financeiros, com isolamento por usuário (Row Level Security).
+          </li>
+          <li>
+            <strong>Google / Apple</strong> — quando você opta por entrar com Google ou Apple,
+            conforme as políticas desses provedores.
+          </li>
+          <li>
+            <strong>OpenAI</strong> — processamento de faturas em PDF e geração de respostas
+            do chat de análise, via nosso backend. Os dados são transmitidos de forma segura
+            e utilizados apenas para a funcionalidade solicitada.
+          </li>
+        </ul>
+        <p>
+          Não vendemos seus dados pessoais. Não compartilhamos suas informações financeiras
+          com terceiros para fins publicitários.
+        </p>
+
+        <h2>6. Armazenamento e segurança</h2>
+        <p>
+          Seus dados são armazenados em servidores gerenciados pelo Supabase, com acesso
+          restrito por autenticação e políticas de segurança em nível de linha (RLS), de modo
+          que cada usuário acessa apenas os próprios registros.
+        </p>
+        <p>
+          Adotamos medidas técnicas e organizacionais razoáveis para proteger suas informações,
+          incluindo comunicação criptografada (HTTPS/TLS). Nenhum sistema é 100% seguro; em caso
+          de incidente relevante, notificaremos os usuários conforme exigido por lei.
+        </p>
+
+        <h2>7. Retenção dos dados</h2>
+        <p>
+          Mantemos seus dados enquanto sua conta estiver ativa ou enquanto forem necessários
+          para fornecer o serviço. Você pode excluir transações, compromissos e outros registros
+          diretamente no App. Ao excluir sua conta, seus dados serão removidos ou anonimizados
+          em prazo razoável, salvo retenção exigida por lei.
+        </p>
+
+        <h2>8. Seus direitos</h2>
+        <p>Nos termos da LGPD e legislações aplicáveis, você pode:</p>
+        <ul>
+          <li>Confirmar a existência de tratamento dos seus dados;</li>
+          <li>Acessar, corrigir ou atualizar dados incompletos ou desatualizados;</li>
+          <li>Solicitar anonimização, bloqueio ou eliminação de dados desnecessários;</li>
+          <li>Solicitar portabilidade dos dados;</li>
+          <li>Revogar consentimentos concedidos;</li>
+          <li>Obter informações sobre compartilhamento com terceiros;</li>
+          <li>Apresentar reclamação à Autoridade Nacional de Proteção de Dados (ANPD).</li>
+        </ul>
+        <p>
+          Para exercer seus direitos, entre em contato pelo e-mail
+          <a href="mailto:privacy@saldox.app">privacy@saldox.app</a>.
+        </p>
+
+        <h2>9. Crianças e adolescentes</h2>
+        <p>
+          O Saldox não se destina a menores de 18 anos. Não coletamos intencionalmente dados
+          de crianças. Se tomarmos conhecimento de que coletamos dados de um menor sem
+          consentimento adequado, excluiremos essas informações.
+        </p>
+
+        <h2>10. Transferência internacional</h2>
+        <p>
+          Alguns prestadores de serviço (como Supabase e OpenAI) podem processar dados em
+          servidores localizados fora do Brasil. Nesses casos, adotamos salvaguardas contratuais
+          e técnicas compatíveis com a LGPD.
+        </p>
+
+        <h2>11. Alterações nesta política</h2>
+        <p>
+          Podemos atualizar esta Política de Privacidade periodicamente. A data da última
+          atualização será indicada no topo desta página. Alterações relevantes poderão ser
+          comunicadas pelo App ou por e-mail.
+        </p>
+
+        <h2>12. Contato</h2>
+        <p>
+          Em caso de dúvidas sobre esta política ou sobre o tratamento dos seus dados pessoais:
+        </p>
+        <p>
+          <strong>E-mail:</strong> <a href="mailto:privacy@saldox.app">privacy@saldox.app</a><br />
+          <strong>Aplicativo:</strong> Saldox (br.com.saldox.app)
+        </p>
+      </div>
+
+      <!-- English -->
+      <div id="content-en" class="content hidden" lang="en-US">
+        <p class="updated">Last updated: June 19, 2026</p>
+
+        <p>
+          This Privacy Policy describes how the <strong>Saldox</strong> application
+          (“App”, “we”, “us”) collects, uses, stores, and protects your personal information
+          when you use our personal finance management services.
+        </p>
+        <p>
+          By using Saldox, you agree to the practices described in this policy, in accordance
+          with applicable data protection laws, including the Brazilian General Data Protection
+          Law (LGPD — Law No. 13,709/2018) where applicable.
+        </p>
+
+        <h2>1. Who we are</h2>
+        <p>
+          Saldox is a personal finance app that lets you track income and expenses, manage
+          credit cards, monitor monthly commitments, and view financial analysis — including
+          features powered by artificial intelligence.
+        </p>
+
+        <h2>2. Data we collect</h2>
+        <p>We may collect and process the following categories of data:</p>
+        <ul>
+          <li>
+            <strong>Account and authentication data:</strong> email address, name (when provided
+            by sign-in providers such as Google or Apple), unique user identifier, and session
+            tokens.
+          </li>
+          <li>
+            <strong>Financial data you enter:</strong> transactions (income and expenses),
+            categories, credit cards, installments, recurring commitments, invoice payments,
+            and other information you record in the App.
+          </li>
+          <li>
+            <strong>App preferences:</strong> language, country, currency, card accounting
+            mode, and other settings saved to your profile or locally on your device.
+          </li>
+          <li>
+            <strong>PDF invoice data:</strong> when you import a credit card statement, the PDF
+            file is sent to our server for AI-assisted extraction and categorization of
+            transactions.
+          </li>
+          <li>
+            <strong>Analysis chat messages:</strong> questions you send and responses generated
+            by the AI assistant, linked to the selected reference month.
+          </li>
+          <li>
+            <strong>Financial summaries for AI:</strong> for chat and analysis features, we send
+            aggregated summaries and metrics of your financial situation to our backend — not the
+            full raw list of all transactions, except as needed for the requested feature.
+          </li>
+          <li>
+            <strong>Locally stored data:</strong> preferences such as language, home screen value
+            visibility, and card date mode may be stored on your device using local storage.
+          </li>
+          <li>
+            <strong>Notifications:</strong> if you enable reminders, the App requests permission
+            to send local notifications on your device. We do not send marketing push
+            notifications.
+          </li>
+        </ul>
+
+        <h2>3. How we use your data</h2>
+        <p>We use your data to:</p>
+        <ul>
+          <li>Authenticate your account and maintain your active session;</li>
+          <li>Display dashboards, charts, reports, and financial summaries;</li>
+          <li>Process PDF invoice imports and suggest transactions;</li>
+          <li>Provide the AI-powered financial analysis assistant;</li>
+          <li>Send recurring transaction reminders, when enabled;</li>
+          <li>Save your language, currency, and country preferences;</li>
+          <li>Ensure security, prevent fraud, and improve the App.</li>
+        </ul>
+
+        <h2>4. Legal bases</h2>
+        <p>Processing of your personal data may be based on:</p>
+        <ul>
+          <li><strong>Contract performance:</strong> to provide App services;</li>
+          <li><strong>Consent:</strong> for optional features such as notifications;</li>
+          <li><strong>Legitimate interest:</strong> for security, improvements, and abuse prevention;</li>
+          <li><strong>Legal obligation:</strong> when required by law.</li>
+        </ul>
+
+        <h2>5. Sharing with third parties</h2>
+        <p>We may share data with the following service providers, solely to operate the App:</p>
+        <ul>
+          <li>
+            <strong>Supabase</strong> — authentication, database, and secure storage of your
+            financial data, with per-user isolation (Row Level Security).
+          </li>
+          <li>
+            <strong>Google / Apple</strong> — when you choose to sign in with Google or Apple,
+            subject to those providers' policies.
+          </li>
+          <li>
+            <strong>OpenAI</strong> — processing of PDF invoices and generation of analysis
+            chat responses, via our backend. Data is transmitted securely and used only for
+            the requested functionality.
+          </li>
+        </ul>
+        <p>
+          We do not sell your personal data. We do not share your financial information with
+          third parties for advertising purposes.
+        </p>
+
+        <h2>6. Storage and security</h2>
+        <p>
+          Your data is stored on servers managed by Supabase, with access restricted by
+          authentication and row-level security (RLS) policies so each user can only access
+          their own records.
+        </p>
+        <p>
+          We adopt reasonable technical and organizational measures to protect your information,
+          including encrypted communication (HTTPS/TLS). No system is 100% secure; in the
+          event of a relevant incident, we will notify users as required by law.
+        </p>
+
+        <h2>7. Data retention</h2>
+        <p>
+          We retain your data while your account is active or as long as needed to provide the
+          service. You can delete transactions, commitments, and other records directly in the
+          App. When you delete your account, your data will be removed or anonymized within a
+          reasonable period, except where retention is required by law.
+        </p>
+
+        <h2>8. Your rights</h2>
+        <p>Under applicable data protection laws, you may:</p>
+        <ul>
+          <li>Confirm whether your data is being processed;</li>
+          <li>Access, correct, or update incomplete or outdated data;</li>
+          <li>Request anonymization, blocking, or deletion of unnecessary data;</li>
+          <li>Request data portability;</li>
+          <li>Withdraw consents you have given;</li>
+          <li>Obtain information about sharing with third parties;</li>
+          <li>Lodge a complaint with the relevant data protection authority.</li>
+        </ul>
+        <p>
+          To exercise your rights, contact us at
+          <a href="mailto:privacy@saldox.app">privacy@saldox.app</a>.
+        </p>
+
+        <h2>9. Children</h2>
+        <p>
+          Saldox is not intended for users under 18 years of age. We do not knowingly collect
+          data from children. If we become aware that we have collected data from a minor without
+          proper consent, we will delete that information.
+        </p>
+
+        <h2>10. International transfers</h2>
+        <p>
+          Some service providers (such as Supabase and OpenAI) may process data on servers located
+          outside Brazil or your country of residence. In such cases, we adopt contractual and
+          technical safeguards compatible with applicable data protection laws.
+        </p>
+
+        <h2>11. Changes to this policy</h2>
+        <p>
+          We may update this Privacy Policy from time to time. The last updated date will be
+          shown at the top of this page. Material changes may be communicated through the App
+          or by email.
+        </p>
+
+        <h2>12. Contact</h2>
+        <p>
+          If you have questions about this policy or how we handle your personal data:
+        </p>
+        <p>
+          <strong>Email:</strong> <a href="mailto:privacy@saldox.app">privacy@saldox.app</a><br />
+          <strong>App:</strong> Saldox (br.com.saldox.app)
+        </p>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Saldox. Todos os direitos reservados. / All rights reserved.</p>
+  </footer>
+
+  <script>
+    const btnPt = document.getElementById('btn-pt');
+    const btnEn = document.getElementById('btn-en');
+    const contentPt = document.getElementById('content-pt');
+    const contentEn = document.getElementById('content-en');
+    const headerSubtitle = document.getElementById('header-subtitle');
+
+    function setLang(lang) {
+      const isPt = lang === 'pt';
+      contentPt.classList.toggle('hidden', !isPt);
+      contentEn.classList.toggle('hidden', isPt);
+      btnPt.classList.toggle('active', isPt);
+      btnEn.classList.toggle('active', !isPt);
+      btnPt.setAttribute('aria-pressed', isPt);
+      btnEn.setAttribute('aria-pressed', !isPt);
+      document.documentElement.lang = isPt ? 'pt-BR' : 'en-US';
+      headerSubtitle.textContent = isPt ? 'Política de Privacidade' : 'Privacy Policy';
+      localStorage.setItem('saldox-privacy-lang', lang);
+    }
+
+    btnPt.addEventListener('click', () => setLang('pt'));
+    btnEn.addEventListener('click', () => setLang('en'));
+
+    const saved = localStorage.getItem('saldox-privacy-lang');
+    const browserLang = navigator.language || navigator.userLanguage || 'pt-BR';
+    if (saved === 'en' || (!saved && browserLang.startsWith('en'))) {
+      setLang('en');
+    } else {
+      setLang('pt');
+    }
+  </script>
+</body>
+</html>
