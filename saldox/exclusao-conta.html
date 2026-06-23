@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Exclusão de Conta do Saldox — Account Deletion" />
+  <title>Saldox — Exclusão de Conta / Account Deletion</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #385494;
+      --primary-light: #5a7bc4;
+      --primary-dark: #1e3566;
+      --background: #f5f6fa;
+      --surface: #ffffff;
+      --text-primary: #1a1f36;
+      --text-secondary: #6b7280;
+      --divider: #e5e7eb;
+      --radius: 12px;
+      --danger: #dc2626;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--background);
+      color: var(--text-primary);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .header {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+      color: #fff;
+      padding: 40px 20px 32px;
+      text-align: center;
+    }
+
+    .header h1 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .header p {
+      font-size: 0.95rem;
+      opacity: 0.9;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: -20px auto 48px;
+      padding: 0 16px;
+    }
+
+    .card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+      padding: 28px 24px;
+    }
+
+    .lang-switch {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 24px;
+      padding: 4px;
+      background: var(--background);
+      border-radius: 10px;
+    }
+
+    .lang-switch button {
+      flex: 1;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      background: transparent;
+      color: var(--text-secondary);
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .lang-switch button.active {
+      background: var(--surface);
+      color: var(--primary);
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    }
+
+    .lang-switch button:hover:not(.active) {
+      color: var(--text-primary);
+    }
+
+    .content h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin: 28px 0 10px;
+    }
+
+    .content h2:first-child {
+      margin-top: 0;
+    }
+
+    .content p {
+      margin-bottom: 12px;
+      color: var(--text-primary);
+      font-size: 0.95rem;
+    }
+
+    .content ul, .content ol {
+      margin: 0 0 14px 20px;
+      font-size: 0.95rem;
+    }
+
+    .content li {
+      margin-bottom: 6px;
+    }
+
+    .content a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .content a:hover {
+      text-decoration: underline;
+    }
+
+    .content strong {
+      font-weight: 600;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 24px 16px;
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+    }
+
+    .alert {
+      background-color: #fef2f2;
+      border-left: 4px solid var(--danger);
+      padding: 16px;
+      border-radius: 4px;
+      margin: 20px 0;
+    }
+
+    .alert p {
+      margin: 0;
+      color: #991b1b;
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        padding: 20px 16px;
+      }
+
+      .header h1 {
+        font-size: 1.45rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h1>Saldox</h1>
+    <p id="header-subtitle">Exclusão de Conta e Dados</p>
+  </header>
+
+  <main class="container">
+    <article class="card">
+      <nav class="lang-switch" aria-label="Language / Idioma">
+        <button type="button" id="btn-pt" class="active" aria-pressed="true">Português (BR)</button>
+        <button type="button" id="btn-en" aria-pressed="false">English (US)</button>
+      </nav>
+
+      <!-- Português -->
+      <div id="content-pt" class="content" lang="pt-BR">
+        <h2>Como excluir sua conta e dados do Saldox</h2>
+        <p>
+          O <strong>Saldox</strong> permite que você solicite a exclusão completa de sua conta e de todos os dados associados a ela (transações, cartões, histórico de conversas, etc.) a qualquer momento. Você pode fazer isso de duas maneiras:
+        </p>
+
+        <h3>Opção 1: Exclusão pelo Aplicativo (Recomendado)</h3>
+        <p>A maneira mais rápida e fácil de excluir seus dados é diretamente no aplicativo:</p>
+        <ol>
+          <li>Abra o aplicativo <strong>Saldox</strong> e faça login na sua conta.</li>
+          <li>Acesse a aba de <strong>Configurações</strong> ou <strong>Perfil</strong>.</li>
+          <li>Selecione a opção <strong>Excluir Conta</strong>.</li>
+          <li>Confirme a exclusão. Seus dados e conta serão apagados de nossos servidores permanentemente.</li>
+        </ol>
+
+        <h3>Opção 2: Exclusão por E-mail (Via Web)</h3>
+        <p>Se você não tem mais acesso ao aplicativo, pode solicitar a exclusão da sua conta enviando um e-mail para nossa equipe de suporte:</p>
+        <ul>
+          <li><strong>E-mail de contato:</strong> <a href="mailto:privacy@saldox.app">privacy@saldox.app</a></li>
+          <li><strong>Assunto:</strong> Solicitação de Exclusão de Conta</li>
+          <li>No corpo do e-mail, informe o <strong>endereço de e-mail associado à sua conta</strong> no Saldox.</li>
+        </ul>
+        <p>Processaremos sua solicitação em até 7 dias úteis e confirmaremos a exclusão respondendo ao seu e-mail.</p>
+
+        <div class="alert">
+          <p>
+            <strong>Atenção:</strong> A exclusão de conta é uma ação <strong>irreversível</strong>. Todos os seus dados financeiros, faturas processadas e histórico de IA serão perdidos permanentemente e não poderão ser recuperados.
+          </p>
+        </div>
+
+        <h2>Quais dados são excluídos?</h2>
+        <p>
+          Ao solicitar a exclusão, todos os seus dados pessoais identificáveis e dados financeiros serão removidos dos nossos bancos de dados (Supabase), incluindo:
+        </p>
+        <ul>
+          <li>Informações de perfil (nome, e-mail)</li>
+          <li>Todas as transações registradas, receitas e despesas</li>
+          <li>Cartões de crédito e informações de faturas</li>
+          <li>Histórico de mensagens com o assistente de inteligência artificial</li>
+        </ul>
+        
+        <p>
+          Para mais informações sobre como tratamos seus dados, consulte nossa <a href="/saldox/index.html">Política de Privacidade</a>.
+        </p>
+      </div>
+
+      <!-- English -->
+      <div id="content-en" class="content hidden" lang="en-US">
+        <h2>How to delete your Saldox account and data</h2>
+        <p>
+          <strong>Saldox</strong> allows you to request the complete deletion of your account and all associated data (transactions, cards, chat history, etc.) at any time. You can do this in two ways:
+        </p>
+
+        <h3>Option 1: In-App Deletion (Recommended)</h3>
+        <p>The fastest and easiest way to delete your data is directly within the app:</p>
+        <ol>
+          <li>Open the <strong>Saldox</strong> app and log in to your account.</li>
+          <li>Go to the <strong>Settings</strong> or <strong>Profile</strong> tab.</li>
+          <li>Select the <strong>Delete Account</strong> option.</li>
+          <li>Confirm the deletion. Your data and account will be permanently erased from our servers.</li>
+        </ol>
+
+        <h3>Option 2: Email Request (Web)</h3>
+        <p>If you no longer have access to the app, you can request account deletion by emailing our support team:</p>
+        <ul>
+          <li><strong>Contact Email:</strong> <a href="mailto:privacy@saldox.app">privacy@saldox.app</a></li>
+          <li><strong>Subject:</strong> Account Deletion Request</li>
+          <li>In the email body, please provide the <strong>email address associated with your account</strong> in Saldox.</li>
+        </ul>
+        <p>We will process your request within 7 business days and confirm the deletion by replying to your email.</p>
+
+        <div class="alert">
+          <p>
+            <strong>Warning:</strong> Account deletion is an <strong>irreversible</strong> action. All your financial data, processed invoices, and AI history will be permanently lost and cannot be recovered.
+          </p>
+        </div>
+
+        <h2>What data is deleted?</h2>
+        <p>
+          When you request deletion, all your personally identifiable data and financial data will be removed from our databases (Supabase), including:
+        </p>
+        <ul>
+          <li>Profile information (name, email)</li>
+          <li>All recorded transactions, income, and expenses</li>
+          <li>Credit cards and invoice information</li>
+          <li>Message history with the artificial intelligence assistant</li>
+        </ul>
+        
+        <p>
+          For more information on how we handle your data, please see our <a href="/saldox/index.html">Privacy Policy</a>.
+        </p>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Saldox. Todos os direitos reservados. / All rights reserved.</p>
+  </footer>
+
+  <script>
+    const btnPt = document.getElementById('btn-pt');
+    const btnEn = document.getElementById('btn-en');
+    const contentPt = document.getElementById('content-pt');
+    const contentEn = document.getElementById('content-en');
+    const headerSubtitle = document.getElementById('header-subtitle');
+
+    function setLang(lang) {
+      const isPt = lang === 'pt';
+      contentPt.classList.toggle('hidden', !isPt);
+      contentEn.classList.toggle('hidden', isPt);
+      btnPt.classList.toggle('active', isPt);
+      btnEn.classList.toggle('active', !isPt);
+      btnPt.setAttribute('aria-pressed', isPt);
+      btnEn.setAttribute('aria-pressed', !isPt);
+      document.documentElement.lang = isPt ? 'pt-BR' : 'en-US';
+      headerSubtitle.textContent = isPt ? 'Exclusão de Conta e Dados' : 'Account and Data Deletion';
+      localStorage.setItem('saldox-deletion-lang', lang);
+    }
+
+    btnPt.addEventListener('click', () => setLang('pt'));
+    btnEn.addEventListener('click', () => setLang('en'));
+
+    const saved = localStorage.getItem('saldox-deletion-lang');
+    const browserLang = navigator.language || navigator.userLanguage || 'pt-BR';
+    if (saved === 'en' || (!saved && browserLang.startsWith('en'))) {
+      setLang('en');
+    } else {
+      setLang('pt');
+    }
+  </script>
+</body>
+</html>
